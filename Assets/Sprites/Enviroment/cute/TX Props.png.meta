@@ -267,9 +267,9 @@ TextureImporter:
       name: TX Props_9
       rect:
         serializedVersion: 2
-        x: 29
-        y: 346
-        width: 37
+        x: 0
+        y: 345
+        width: 66
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -414,9 +414,9 @@ TextureImporter:
       name: TX Props_23
       rect:
         serializedVersion: 2
-        x: 29
-        y: 283
-        width: 37
+        x: 0
+        y: 282
+        width: 66
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
