@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: c126b4b905c6acf488497e50e0cdd7ad
+  - enabled: 1
+    path: Assets/Scenes/Sotano.unity
+    guid: 15e9a041cea25a7409d8dba5ad9df620
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 81417c4e0bb381f4aadcd912b6b5541d
   m_configObjects: {}
