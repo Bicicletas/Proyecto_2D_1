@@ -279,10 +279,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 19.5, y: -16.155}
-      - {x: 19.5, y: 11.85}
-      - {x: -25.5, y: 11.85}
-      - {x: -25.5, y: -16.155}
+    - - {x: 60, y: -40}
+      - {x: 60, y: 40}
+      - {x: -60, y: 40}
+      - {x: -60, y: -40}
 --- !u!1 &7793464003738187025
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

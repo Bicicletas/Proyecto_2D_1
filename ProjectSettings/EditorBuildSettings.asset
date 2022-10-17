@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 81417c4e0bb381f4aadcd912b6b5541d
+  - enabled: 1
+    path: Assets/Scenes/Backroom.unity
+    guid: 3b843b9d1a77e0445b779c0c31502c3b
   m_configObjects: {}
