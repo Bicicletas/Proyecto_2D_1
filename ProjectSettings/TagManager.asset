@@ -48,6 +48,9 @@ TagManager:
   - name: Middleground
     uniqueID: 1243760423
     locked: 0
+  - name: Shadows
+    uniqueID: 1849869921
+    locked: 0
   - name: Foreground
     uniqueID: 2569692863
     locked: 0

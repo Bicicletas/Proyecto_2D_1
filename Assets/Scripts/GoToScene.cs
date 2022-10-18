@@ -11,9 +11,22 @@ public class GoToScene : MonoBehaviour
 
     private bool manualEnter;
 
+    public bool canTp;
+
+    private void Start()
+    {
+        canTp = false;
+    }
+
     private void Update()
     {
-        manualEnter = Input.GetButtonDown("Fire1");
+        if(!isAuto && !manualEnter)
+        {
+            if (canTp)
+            {
+                manualEnter = Input.GetButtonDown("Fire1");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,10 +44,15 @@ public class GoToScene : MonoBehaviour
     {
         if (other.name == "Player")
         {
+            canTp = true;
             if (!isAuto && manualEnter)
             {
                 SceneManager.LoadScene(sceneName);
             }
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canTp = false;
     }
 }
