@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour
 
     public static bool playerCreated;
 
+    public Vector2 lastDirection;
+
+    public string nextUuid;
+
     private float inputTol = 0.2f;
     private float xInput, yInput;
 
     private bool isWalking;
-    public Vector2 lastDirection;
     private Animator _animator;
 
     private Rigidbody2D _playerRigidbody;

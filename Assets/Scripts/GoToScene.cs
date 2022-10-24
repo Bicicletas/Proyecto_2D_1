@@ -9,9 +9,11 @@ public class GoToScene : MonoBehaviour
 
     public bool isAuto;
 
+    public string uuid;
+
     private bool manualEnter;
 
-    public bool canTp;
+    private bool canTp;
 
     private void Start()
     {
@@ -29,28 +31,29 @@ public class GoToScene : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Teleprot(string objName)
     {
-        if(other.name == "Player")
+        if(objName == "Player")
         {
-            if (isAuto)
+            canTp = true;
+            if (isAuto || (!isAuto && manualEnter))
             {
+                FindObjectOfType<PlayerController>().nextUuid = uuid;
                 SceneManager.LoadScene(sceneName);
             }
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Teleprot(other.name);
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "Player")
-        {
-            canTp = true;
-            if (!isAuto && manualEnter)
-            {
-                SceneManager.LoadScene(sceneName);
-            }
-        }
+        Teleprot(other.name);
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         canTp = false;
