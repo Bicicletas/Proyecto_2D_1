@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7846189348882253078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3741769000736242232, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1716637499, guid: 7c33ccd24feda534488d4de5c80a38d9, type: 3}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242233, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242237, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Name
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242238, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4269085
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3108502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.20776469
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.40541276
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.375
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b12394d25971140489a597fefa6d5840, type: 3}
