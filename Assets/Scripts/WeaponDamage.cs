@@ -6,11 +6,24 @@ public class WeaponDamage : MonoBehaviour
 {
     public int damage;
 
+    public GameObject bloodParticle;
+
+    private GameObject hitPoint;
+
+    private void Start()
+    {
+        hitPoint = transform.Find("HitPoint").gameObject;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
+            if(bloodParticle != null && hitPoint != null)
+            {
+                Instantiate(bloodParticle, hitPoint.transform.position, transform.rotation);
+            }
         }
     }
 }

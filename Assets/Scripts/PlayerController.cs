@@ -17,7 +17,11 @@ public class PlayerController : MonoBehaviour
     private float xInput, yInput;
 
     private bool isWalking;
+    private bool isAttacking;
     private Animator _animator;
+
+    [SerializeField] private float attackTime;
+    private float attackTimeCounter;
 
     private Rigidbody2D _playerRigidbody;
 
@@ -36,18 +40,22 @@ public class PlayerController : MonoBehaviour
         yInput = Input.GetAxisRaw(VERTICAL);
         isWalking = false;
 
-        if (Mathf.Abs(xInput) > inputTol)
+        if (isAttacking)
         {
-            _playerRigidbody.velocity = new Vector2(xInput * speed, 0);
-            isWalking = true;
-            lastDirection = new Vector2(xInput, 0);
+            attackTimeCounter -= Time.deltaTime;
+            if(attackTimeCounter < 0)
+            {
+                isAttacking = false;
+            }
         }
-        
-        if (Mathf.Abs(yInput) > inputTol)
+        else if (Input.GetMouseButtonDown(0))
         {
-            _playerRigidbody.velocity = new Vector2(0, yInput * speed);
-            isWalking = true;
-            lastDirection = new Vector2(0, yInput);
+            isAttacking = true;
+            attackTimeCounter = attackTime;
+        }
+        else
+        {
+            Movement();
         }
     }
 
@@ -58,10 +66,28 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("LastHorizontal", lastDirection.x);
         _animator.SetFloat("LastVertical", lastDirection.y);
         _animator.SetBool("IsWalking", isWalking);
+        _animator.SetBool("IsAttacking", isAttacking);
 
-        if (!isWalking)
+        if (!isWalking || isAttacking)
         {
             _playerRigidbody.velocity = Vector2.zero;
+        }
+    }
+
+    private void Movement()
+    {
+        if (Mathf.Abs(xInput) > inputTol)
+        {
+            _playerRigidbody.velocity = new Vector2(xInput * speed, 0);
+            isWalking = true;
+            lastDirection = new Vector2(xInput, 0);
+        }
+
+        if (Mathf.Abs(yInput) > inputTol)
+        {
+            _playerRigidbody.velocity = new Vector2(0, yInput * speed);
+            isWalking = true;
+            lastDirection = new Vector2(0, yInput);
         }
     }
 }

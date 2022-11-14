@@ -106,6 +106,7 @@ MonoBehaviour:
   speed: 5
   lastDirection: {x: 0, y: 0}
   nextUuid: 
+  attackTime: 0.5
 --- !u!61 &3041040329881277741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502815548115884518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.375, y: -0.3125, z: 0}
+  m_LocalPosition: {x: -0.3125, y: -0.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -239,6 +240,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 124571899172047966}
     m_Modifications:
+    - target: {fileID: 6849461220066934568, guid: 74b8b2aef9d586041bf2b160ae89064d, type: 3}
+      propertyPath: bloodParticle
+      value: 
+      objectReference: {fileID: 4349215977564048942, guid: 64e57eae04ff403499278950890ae850, type: 3}
+    - target: {fileID: 6849461220066934569, guid: 74b8b2aef9d586041bf2b160ae89064d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6849461220066934571, guid: 74b8b2aef9d586041bf2b160ae89064d, type: 3}
       propertyPath: m_Name
       value: Axe
@@ -353,6 +362,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242238, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: bloodParticle
+      value: 
+      objectReference: {fileID: 4349215977564048942, guid: 64e57eae04ff403499278950890ae850, type: 3}
+    - target: {fileID: 3741769000736242239, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12394d25971140489a597fefa6d5840, type: 3}
 --- !u!4 &687626613 stripped
@@ -411,6 +428,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8076397735613782580, guid: e43cabeb7c25fa849a3fc749be42fbbd, type: 3}
+      propertyPath: bloodParticle
+      value: 
+      objectReference: {fileID: 4349215977564048942, guid: 64e57eae04ff403499278950890ae850, type: 3}
     - target: {fileID: 8076397735613782583, guid: e43cabeb7c25fa849a3fc749be42fbbd, type: 3}
       propertyPath: m_Name
       value: Knife

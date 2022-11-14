@@ -175,8 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fa3db96053468458c96698af6c916d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRevivePlayer: 2
-  damage: 10
+  damage: 2
 --- !u!114 &2025624397041707944
 MonoBehaviour:
   m_ObjectHideFlags: 0
