@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  blinkingDuration: 0.5
 --- !u!1 &3222792752329538399
 GameObject:
   m_ObjectHideFlags: 0

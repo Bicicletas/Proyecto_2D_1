@@ -7,6 +7,7 @@ public class WeaponDamage : MonoBehaviour
     public int damage;
 
     public GameObject bloodParticle;
+    public GameObject damageDamageCanvas;
 
     private GameObject hitPoint;
 
@@ -19,6 +20,9 @@ public class WeaponDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            GameObject canvas = Instantiate(damageDamageCanvas, hitPoint.transform.position, Quaternion.identity);
+            canvas.GetComponent<DamageNumber>().damagePoints = damage;
+
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
             if(bloodParticle != null && hitPoint != null)
             {

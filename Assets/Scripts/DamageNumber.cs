@@ -12,9 +12,12 @@ public class DamageNumber : MonoBehaviour
 
     public TextMeshProUGUI damageText;
 
-    private void Update()
+    private void Start()
     {
         damageText.text = damagePoints.ToString();
+    }
+    private void Update()
+    {
         transform.position = new Vector3(transform.position.x, transform.position.y + verticalSpeed * Time.deltaTime, 0);
         transform.localScale *= 1 - Time.deltaTime / scaleFactor;
         damageText.alpha -= alphaFactor * Time.deltaTime;

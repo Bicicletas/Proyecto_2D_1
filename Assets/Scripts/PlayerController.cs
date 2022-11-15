@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isWalking;
     private bool isAttacking;
+
+    public bool canMove = true;
+
     private Animator _animator;
 
     [SerializeField] private float attackTime;
@@ -33,12 +36,18 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerCreated = true;
+        lastDirection = Vector2.down;
     }
     private void Update()
     {
         xInput = Input.GetAxisRaw(HORIZONTAL);
         yInput = Input.GetAxisRaw(VERTICAL);
         isWalking = false;
+
+        if (!canMove)
+        {
+            return;
+        }
 
         if (isAttacking)
         {
