@@ -34,8 +34,22 @@ public class DoDamage : MonoBehaviour
             isPlayerReviving = true;
             timeRevivalCounter = timeToRevivePlayer;
             */
+            StartCoroutine(SafeTime(other.gameObject));
+
+            if (!this.isActiveAndEnabled)
+            {
+                StopAllCoroutines();
+                print("caca");
+            }
 
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
         }
+    }
+
+    IEnumerator SafeTime(GameObject g)
+    {
+        g.GetComponent<BoxCollider2D>().isTrigger = true;
+        yield return new WaitForSeconds(1f);
+        g.GetComponent<BoxCollider2D>().isTrigger = false;
     }
 }

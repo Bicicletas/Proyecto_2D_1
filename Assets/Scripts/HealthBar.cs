@@ -12,12 +12,12 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         healthBarSlider = GetComponent<Slider>();
-
-        healthBarSlider.maxValue = player.GetComponent<HealthManager>().maxHealth;
     }
 
     private void Update()
     {
+        healthBarSlider.maxValue = player.GetComponent<HealthManager>().maxHealth;
+
         healthBarSlider.value = player.GetComponent<HealthManager>().CurrentHealth;
     }
 }

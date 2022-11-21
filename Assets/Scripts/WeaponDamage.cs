@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponDamage : MonoBehaviour
 {
     public int damage;
+    public int index;
 
     public GameObject bloodParticle;
     public GameObject damageDamageCanvas;

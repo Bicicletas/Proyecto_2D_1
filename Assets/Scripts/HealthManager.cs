@@ -7,6 +7,8 @@ public class HealthManager : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
 
+    public int expWhenDefeated;
+
     public int CurrentHealth
     {
         get
@@ -73,6 +75,10 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            if (gameObject.tag.Equals("Enemy"))
+            {
+                GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated * GameObject.Find("Player").GetComponent<CharacterStats>().level);
+            }
             gameObject.SetActive(false);
         }
 

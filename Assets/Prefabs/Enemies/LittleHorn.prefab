@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fa3db96053468458c96698af6c916d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 30
 --- !u!114 &2450034418998913929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  expWhenDefeated: 100
   blinkingDuration: 0.5
 --- !u!1 &3222792752329538399
 GameObject:

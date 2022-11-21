@@ -68,6 +68,10 @@ PrefabInstance:
       value: Axe
       objectReference: {fileID: 0}
     - target: {fileID: 3741769000736242238, guid: b12394d25971140489a597fefa6d5840, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741769000736242238, guid: b12394d25971140489a597fefa6d5840, type: 3}
       propertyPath: damage
       value: 25
       objectReference: {fileID: 0}
