@@ -18,5 +18,31 @@ public class UIManager : MonoBehaviour
     public void ToggleInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeInHierarchy);
+
+        if (inventoryPanel.activeInHierarchy)
+        {
+            ClearInventory();
+            FillInventory();
+        }
+    }
+
+    public void FillInventory()
+    {
+        WeaponManager weaponManager = FindObjectOfType<WeaponManager>();
+        List<GameObject> weapons = weaponManager.GetAllWeapons();
+        foreach ( GameObject w in weapons)
+        {
+            Button button = Instantiate(weaponButton, inventoryPanel.transform);
+            button.onClick.AddListener(() => weaponManager.ChangeWeapon(w.GetComponent<WeaponDamage>().index));
+            button.image.sprite = w.GetComponent<SpriteRenderer>().sprite;
+        }
+    }
+
+    public void ClearInventory()
+    {
+        foreach (Transform t in inventoryPanel.transform)
+        {
+            Destroy(t.gameObject);
+        }
     }
 }

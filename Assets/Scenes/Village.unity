@@ -28257,6 +28257,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 687626612, guid: 60071292c49b14649a63d0953f278697, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3041040329881277729, guid: 60071292c49b14649a63d0953f278697, type: 3}
       propertyPath: m_Name
       value: Player
@@ -28303,6 +28307,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3041040329881277743, guid: 60071292c49b14649a63d0953f278697, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228320203639450700, guid: 60071292c49b14649a63d0953f278697, type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8315316897625160634, guid: 60071292c49b14649a63d0953f278697, type: 3}

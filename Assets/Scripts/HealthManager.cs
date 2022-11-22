@@ -63,8 +63,8 @@ public class HealthManager : MonoBehaviour
 
                 if (gameObject.name == "Player")
                 {
-                    GetComponent<BoxCollider2D>().enabled = true;
-                    GetComponent<PlayerController>().canMove = true;
+                    //GetComponent<BoxCollider2D>().enabled = true;
+                    //GetComponent<PlayerController>().canMove = true;
                 }
             }
         }
@@ -88,10 +88,17 @@ public class HealthManager : MonoBehaviour
             blinkingCounter = blinkingDuration;
             if (gameObject.name == "Player")
             {
-                GetComponent<BoxCollider2D>().enabled = false;
-                GetComponent<PlayerController>().canMove = false;
+                StartCoroutine(SafeTime());
+                //GetComponent<BoxCollider2D>().enabled = false;
+                //GetComponent<PlayerController>().canMove = false;
             }
         }
+    }
+    IEnumerator SafeTime()
+    {
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        yield return new WaitForSeconds(1f);
+        GetComponent<BoxCollider2D>().isTrigger = false;
     }
 
     private void ToggleColor(bool isVisible)
